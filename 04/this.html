@@ -1,0 +1,18 @@
+<html>
+<body>
+	<button id="btn">Click</button>
+	<script>
+		// var add = function(){
+		// 	console.log(this);
+		// }
+
+		const add = () =>{
+			console.log(this);
+		}
+
+		document.addEventListener("DOMContentLoaded", add);
+		document.getElementById("btn").addEventListener("click", add);
+	</script>
+
+</body>
+</html>
