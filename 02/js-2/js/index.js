@@ -20,4 +20,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.querySelector("#img1").setAttribute("src", "images/twc-logo.gif");
 	});
 	//Your exercise start here});
+
+	document.querySelector("#test-menu1").addEventListener("click", function(){
+		document.querySelector("#test-sentence").innerHTML = "This paragragh contains a <i>italic</i> sentence.";
+	});
+
+	document.querySelector("#test-menu2").addEventListener("click", function(){
+		document.querySelector("#url-test").innerHTML = "the Cordova document";
+	});
+
+	document.querySelector("#test-menu3").addEventListener("click", function(){
+		document.querySelector("#url-test").setAttribute("href", "https://cordova.apache.org/docs/en/latest/");
+	});
+
+	document.querySelector("#test-menu4").addEventListener("click", function(){
+		document.querySelector("#img-test").setAttribute("src", "images/reactnative-logo.png");
+	});
+
+	document.querySelector("#test-menu5").addEventListener("click", function(){
+		document.querySelector("#button-test").value = "We are all buttons.";
+	});
 });

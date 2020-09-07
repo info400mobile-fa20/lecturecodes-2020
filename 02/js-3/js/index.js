@@ -61,5 +61,50 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		// olNode.insertBefore(newNode, secondChild);
 		
 	});
+
+	document.querySelector("#test-menu2").addEventListener("click", function(){
+		
+		var newNode = document.createElement("span");
+		var text = document.createTextNode("Beggining of P");
+		var brNode = document.createElement("br");
+		newNode.appendChild(text);
+		newNode.appendChild(brNode);
+
+		var olNode = document.getElementsByTagName("p")[0];
+		var firstChild = olNode.firstElementChild;
+		olNode.insertBefore(newNode, firstChild);
+		
+	});
+
+	document.querySelector("#test-menu3").addEventListener("click", function(){
+		
+		var newNode = document.createElement("span");
+		var text = document.createTextNode("Before Span 1");
+		var brNode = document.createElement("br");
+		newNode.appendChild(text);
+		newNode.appendChild(brNode);
+
+		var olNode = document.getElementsByTagName("p")[0];
+		var firstChild = olNode.children[1];
+		olNode.insertBefore(newNode, firstChild);
+		
+	});
+
+	document.querySelector("#test-menu4").addEventListener("click", function(){
+		
+		var newNode = document.createElement("li");
+		var text = document.createTextNode("After span 3");
+		// var brNode = document.createElement("br");
+		newNode.appendChild(text);
+		// newNode.appendChild(brNode);
+
+		var olNode = document.getElementsByTagName("p")[0];
+		var lastChild = olNode.children[7];//if you added <br>, they coundted as a child
+		olNode.insertBefore(newNode, lastChild);
+		
+	});
+
+
+
 });
 

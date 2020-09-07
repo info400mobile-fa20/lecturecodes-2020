@@ -21,10 +21,32 @@ class Caption extends React.Component{
 
 class Time extends React.Component{
 
+  constructor(props){
+    super(props);
+    this.state = {time: new Date()}
+  }
+
+  // componentDidMount(){
+  //   this.timer = setInterval(
+  //     () => {
+  //       this.setState({time: new Date()});
+  //     }
+  //     , 1000);
+  // }
+
+  // componentWillUnmount(){
+  //   clearInterval(this.timer);
+  // }
+
+  updateTime = ()=>{
+    this.setState({time: new Date()});
+  }
+
   render(){
     return (
       <div className="status">
-        <span>{this.props.time}</span>
+        <span>{this.state.time.toString()}</span>
+        <button onClick = {this.updateTime} className="button">Click me</button>
       </div>
     )
   }
@@ -43,6 +65,29 @@ class Comment extends React.Component{
   }
 }
 
+class Input extends React.Component{
+
+  handleOnchange = (e) =>{
+    alert(e.target.value);
+  }
+
+  render(){
+    return(
+      <div id="comments">
+          <form id='comment_form'>
+            <input 
+              type="text" 
+              name="comment_text" 
+              placeholder="Comment" 
+              id="comment_text" 
+              onChange = {this.handleOnchange}
+            />
+          </form>
+      </div>
+    )
+  }
+}
+
 function App() {
   return (
     <div className="App">
@@ -50,8 +95,9 @@ function App() {
         <Photo src={photo}/>
         <Caption caption="Kitties"/>
         
-        <Time time="2020.08.26"/>
+        <Time/>
         <Comment text="This is a sample comment" commentTime="12:42 08/26/2020" />
+        <Input />
       </header>
     </div>
   );

@@ -35,6 +35,34 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	});
 
 	//Your exercise start here
+
+	document.querySelector("#test-menu1").addEventListener("click", function(){
+		// document.getElementsByTagName("ol")[0].firstElementChild.className = "list-group-item";
+		document.getElementsByTagName("p")[0].style.display = "none";
+
+	});
+
+	document.querySelector("#test-menu2").addEventListener("click", function(){
+		// document.getElementsByTagName("ol")[0].firstElementChild.className = "list-group-item";
+		document.getElementsByTagName("p")[0].style.display = "block";
+
+	});
+
+	document.querySelector("#test-menu3").addEventListener("click", function(){
+		// document.getElementsByTagName("ol")[0].firstElementChild.className = "list-group-item";
+		document.getElementsByTagName("span")[0].className = "alert alert-dark";
+		document.getElementsByTagName("span")[1].className = "alert alert-success";
+		document.getElementsByTagName("span")[2].className = "alert alert-warning";
+
+	});
+
+	document.querySelector("#test-menu4").addEventListener("click", function(){
+		// document.getElementsByTagName("ol")[0].firstElementChild.className = "list-group-item";
+		document.getElementsByTagName("span")[2].className = "";
+		
+
+	});
+
 });
 
 
