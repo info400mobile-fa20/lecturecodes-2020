@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 
 // var data;
 
-fetch("http://api.openweathermap.org/data/2.5/weather?q=Bloomington,Indiana&appid=4acd6f48610c97f8c4c409daa616bcb3")
+fetch("http://api.openweathermap.org/data/2.5/weather?q=Bloomington,Indiana&appid=<apikey>")
 .then(response=>{ return response.json()}) //process the promise with the response, transforming it into json object
 .then(result => {
 	console.log(result);
@@ -15,7 +15,7 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Bloomington,Indiana&appi
 // //using await/async
 // getWeather = async()=>{
 // 	//wait for the fetch result to assign it to the response
-// 	const response = await fetch("http://api.openweathermap.org/data/2.5/weather?q=Bloomington,Indiana&appid=4acd6f48610c97f8c4c409daa616bcb3");
+// 	const response = await fetch("http://api.openweathermap.org/data/2.5/weather?q=Bloomington,Indiana&appid=<apikey>");
 // 	//wait for the reponse transforming to a json obejct
 // 	const result = await response.json();
 
